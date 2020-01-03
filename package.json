@@ -6,7 +6,7 @@
     "dev": "rollup -c -w",
     "start": "sirv public",
     "serve": "node server.js",
-    "test": "jest src",
+    "test": "jest src --collectCoverage=true",
     "test:dev": "npm run test -- --watch",
     "lint": "eslint src"
   },
