@@ -9,5 +9,8 @@ module.exports = {
     verbose: true,
     transformIgnorePatterns: ["node_modules"],
     setupFilesAfterEnv: ["@testing-library/jest-dom/extend-expect"],
-    testResultsProcessor: "jest-junit"
+    reporters: ["default", ["jest-junit", {
+        "outputDirectory": "test-results/jest",
+        "outputName": "results.xml",
+    }]],
 };
