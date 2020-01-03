@@ -7,7 +7,8 @@
     "start": "sirv public",
     "serve": "node server.js",
     "test": "jest src",
-    "test:dev": "npm run test -- --watch"
+    "test:dev": "npm run test -- --watch",
+    "lint": "eslint src"
   },
   "devDependencies": {
     "@babel/core": "^7.7.7",
@@ -17,6 +18,8 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/svelte": "^1.11.0",
     "babel-jest": "^24.9.0",
+    "eslint": "^6.8.0",
+    "eslint-plugin-svelte3": "^2.7.3",
     "jest": "^24.9.0",
     "jest-transform-svelte": "^2.1.0",
     "rollup": "^1.20.0",
