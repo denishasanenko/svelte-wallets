@@ -65,4 +65,37 @@ describe("Wallets component", () => {
             expect(activatedWalletId).toBe(props.wallets[2].id);
         } catch (e) {}
     });
+
+    test("should render correct title after set new props", () => {
+        const newProps = {...props};
+        const title = newProps.wallets[0].title;
+        delete newProps.wallets[0].title;
+        component.rerender({props: newProps});
+        expect(component.container.querySelector('.title')).toHaveTextContent('');
+        newProps.wallets[0].title = title;
+    });
+
+    test("should render correct balance after set new props", () => {
+        const newProps = {...props};
+        const balance = newProps.wallets[0].balance;
+        delete newProps.wallets[0].balance;
+        component.rerender({props: newProps});
+        expect(component.container.querySelector('.balance')).toHaveTextContent('0 EUR');
+        newProps.wallets[0].balance = balance
+    });
+
+    test("should render correct currency after set new props", () => {
+        const newProps = {...props};
+        const currency = newProps.wallets[0].currency;
+        delete newProps.wallets[0].currency;
+        component.rerender({props: newProps});
+        expect(component.container.querySelector('.balance')).toHaveTextContent('2000');
+        newProps.wallets[0].currency = currency
+    });
+
+    test("should render placeholder for empty wallets list", () => {
+        component.rerender({props: {}});
+        expect(component.container.querySelector('p')).toHaveTextContent('You have no wallets yet');
+    });
+
 });

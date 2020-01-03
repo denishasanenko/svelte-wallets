@@ -60,9 +60,11 @@
     {#each wallets as wallet}
         <div class="wallet" class:active={wallet.id === activeWalletId} on:click={() => activateWallet(wallet.id)}>
             <p>Wallet name</p>
-            <p class="title">{wallet.title}</p>
+            <p class="title">{wallet.title || ''}</p>
             <p>Current balance</p>
-            <p class="balance" class:negative={wallet.balance < 0}>{wallet.balance/100} {wallet.currency}</p>
+            <p class="balance" class:negative={wallet.balance < 0}>{(wallet.balance || 0)/100} {wallet.currency || ''}</p>
         </div>
+    {:else}
+        <p>You have no wallets yet</p>
     {/each}
 </section>
