@@ -7,7 +7,9 @@ jobs:
       - checkout
       - run: npm install
       - run: npm run lint
-      - run: npm run test
-      - run: npm run build
+      - run:
+          name: "Run Jest and Collect Coverage Reports"
+          command: jest --collectCoverage=true
       - store_artifacts:
-        path: coverage
+          path: coverage
+      - run: npm run build
