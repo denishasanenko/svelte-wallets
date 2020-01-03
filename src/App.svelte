@@ -3,9 +3,6 @@
 	import Wallets from './Wallets.svelte'
 	import Wallet from "./Wallet.svelte";
 
-	export let name;
-
-
 	let activeWallet = {};
 	let activeWalletId = 1;
 	let wallets = [

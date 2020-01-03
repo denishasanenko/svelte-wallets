@@ -35,7 +35,7 @@
     }
 
     .balance {
-        color: green;
+        color: #008000;
         font-size: 24px;
     }
 
@@ -58,11 +58,11 @@
 <section>
     <h1>My wallets</h1>
     {#each wallets as wallet}
-        <div class="wallet" class:active={wallet.id === activeWalletId} on:click={event => activateWallet(wallet.id)}>
+        <div class="wallet" class:active={wallet.id === activeWalletId} on:click={() => activateWallet(wallet.id)}>
             <p>Wallet name</p>
             <p class="title">{wallet.title}</p>
             <p>Current balance</p>
-            <p class="balance" class:negative={wallet.balance < 0}>{wallet.balance/100} <span>{wallet.currency}</span></p>
+            <p class="balance" class:negative={wallet.balance < 0}>{wallet.balance/100} {wallet.currency}</p>
         </div>
     {/each}
 </section>
