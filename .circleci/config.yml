@@ -8,6 +8,8 @@ jobs:
       - run: npm install
       - run: npm run lint
       - run: npm run test
+      - store_test_results:
+          path: junit.xml
       - store_artifacts:
           path: coverage
       - run: npm run build
