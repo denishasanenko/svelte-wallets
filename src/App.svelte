@@ -1,10 +1,13 @@
 <script>
+	import { onMount } from 'svelte';
 	import Wallets from './Wallets.svelte'
 	import Wallet from "./Wallet.svelte";
 
 	export let name;
 
-	let activeWallet = 2;
+
+	let activeWallet = {};
+	let activeWalletId = 1;
 	let wallets = [
 		{
 			id: 1,
@@ -30,8 +33,18 @@
 	];
 
 	const activateWallet = (id) => {
-		activeWallet = id;
-	}
+		activeWalletId = id;
+		activeWallet = {
+			...wallets.find(wallet => wallet.id === id),
+			lastTopUp: 30032,
+			expenses: 43002141,
+			operations: []
+		};
+	};
+
+	onMount(() => {
+		activateWallet(1);
+	});
 </script>
 
 <style>
@@ -46,6 +59,6 @@
 </style>
 
 <main>
-	<Wallets wallets={wallets} activeWallet={activeWallet} on:activateWallet={event => activateWallet(event.detail)} />
-	<Wallet/>
+	<Wallets wallets={wallets} activeWalletId={activeWalletId} on:activateWallet={event => activateWallet(event.detail)} />
+	<Wallet activeWallet={activeWallet} />
 </main>

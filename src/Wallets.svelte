@@ -1,7 +1,7 @@
 <script>
     import { createEventDispatcher } from 'svelte';
     export let wallets = [];
-    export let activeWallet = 0;
+    export let activeWalletId = 0;
 
     const dispatch = createEventDispatcher();
 
@@ -58,7 +58,7 @@
 <section>
     <h1>My wallets</h1>
     {#each wallets as wallet}
-        <div class="wallet" class:active={wallet.id === activeWallet} on:click={event => activateWallet(wallet.id)}>
+        <div class="wallet" class:active={wallet.id === activeWalletId} on:click={event => activateWallet(wallet.id)}>
             <p>Wallet name</p>
             <p class="title">{wallet.title}</p>
             <p>Current balance</p>
