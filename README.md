@@ -1,4 +1,5 @@
 [![CircleCI](https://circleci.com/gh/denishasanenko/svelte-wallets.svg?style=svg)](https://circleci.com/gh/denishasanenko/svelte-wallets)
+[![codecov](https://codecov.io/gh/denishasanenko/svelte-wallets/branch/master/graph/badge.svg)](https://codecov.io/gh/denishasanenko/svelte-wallets)
 
 ---
 
