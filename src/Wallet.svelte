@@ -135,7 +135,7 @@
                     </div>
                 </div>
             {:else}
-                <p>You have no operations yet!</p>
+                <p class="placeholder">You have no operations yet!</p>
             {/each}
         </div>
     </div>

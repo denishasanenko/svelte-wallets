@@ -6,8 +6,8 @@
     "dev": "rollup -c -w",
     "start": "sirv public",
     "serve": "node server.js",
-    "test": "jest src --collectCoverage=true && codecov",
-    "test:dev": "npm run test -- --watch",
+    "test": "jest src --collectCoverage=true & codecov",
+    "test:dev": "jest src --collectCoverage=true --watch",
     "lint": "eslint src"
   },
   "devDependencies": {
