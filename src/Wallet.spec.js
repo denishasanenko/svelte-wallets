@@ -76,6 +76,14 @@ describe("Wallet component", () => {
         expect(component.container.querySelectorAll(".transaction").length).toBe(4);
     });
 
+    test("should render correct transaction date", () => {
+        expect(component.container.querySelector(".transaction .time")).toHaveTextContent('payment - Sat Jan 04 2020');
+    });
+
+    test("should render correct transaction date", () => {
+        expect(component.container.querySelector(".transaction .amount")).toHaveTextContent('-132.2 EUR');
+    });
+
     test("should render placeholder on empty transactions list", () => {
         const newProps = {...props};
         const transactions = newProps.activeWallet.transactions;

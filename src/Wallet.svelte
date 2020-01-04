@@ -1,5 +1,6 @@
 <script>
     export let activeWallet = {};
+    $: transactions = activeWallet.transactions || [];
 </script>
 
 <style>
@@ -121,22 +122,24 @@
         </div>
 
         <div class="transactions">
-            {#each activeWallet.transactions || [] as transaction}
-                <div class="transaction">
-                    <div class="category">
-
-                    </div>
-                    <div class="info">
-                        <p class="title">{transaction.title}</p>
-                        <p class="time">{transaction.operation} - {new Date(transaction.timestamp).toDateString()}</p>
-                    </div>
-                    <div class="amount right">
-                        <p class="{transaction.operation}">{transaction.amount/100} {activeWallet.currency}</p>
-                    </div>
-                </div>
-            {:else}
+            {#if !transactions.length}
                 <p class="placeholder">You have no operations yet!</p>
-            {/each}
+            {:else}
+                {#each transactions as transaction}
+                    <div class="transaction">
+                        <div class="category">
+
+                        </div>
+                        <div class="info">
+                            <p class="title">{transaction.title}</p>
+                            <p class="time">{transaction.operation} - {new Date(transaction.timestamp).toDateString()}</p>
+                        </div>
+                        <div class="amount right">
+                            <p class="{transaction.operation}">{transaction.amount/100} {activeWallet.currency}</p>
+                        </div>
+                    </div>
+                {/each}
+            {/if}
         </div>
     </div>
 </section>
