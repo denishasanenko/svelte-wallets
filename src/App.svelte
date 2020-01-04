@@ -35,7 +35,233 @@
 			...wallets.find(wallet => wallet.id === id),
 			lastTopUp: 30032,
 			expenses: 43002141,
-			operations: []
+			transactions: [
+				{
+					id: 1,
+					category: 'home',
+					title: 'Home',
+					timestamp: 1578136544987,
+					operation: 'payment',
+					amount: -13220
+				},
+				{
+					id: 2,
+					category: 'topUp',
+					title: 'Top-up',
+					timestamp: 1578136544987,
+					operation: 'received',
+					amount: 40000
+				},
+				{
+					id: 1,
+					category: 'home',
+					title: 'Home',
+					timestamp: 1578136544987,
+					operation: 'payment',
+					amount: -13220
+				},
+				{
+					id: 2,
+					category: 'topUp',
+					title: 'Top-up',
+					timestamp: 1578136544987,
+					operation: 'received',
+					amount: 40000
+				},
+				{
+					id: 1,
+					category: 'home',
+					title: 'Home',
+					timestamp: 1578136544987,
+					operation: 'payment',
+					amount: -13220
+				},
+				{
+					id: 2,
+					category: 'topUp',
+					title: 'Top-up',
+					timestamp: 1578136544987,
+					operation: 'received',
+					amount: 40000
+				},
+				{
+					id: 1,
+					category: 'home',
+					title: 'Home',
+					timestamp: 1578136544987,
+					operation: 'payment',
+					amount: -13220
+				},
+				{
+					id: 2,
+					category: 'topUp',
+					title: 'Top-up',
+					timestamp: 1578136544987,
+					operation: 'received',
+					amount: 40000
+				},
+				{
+					id: 1,
+					category: 'home',
+					title: 'Home',
+					timestamp: 1578136544987,
+					operation: 'payment',
+					amount: -13220
+				},
+				{
+					id: 2,
+					category: 'topUp',
+					title: 'Top-up',
+					timestamp: 1578136544987,
+					operation: 'received',
+					amount: 40000
+				},
+				{
+					id: 1,
+					category: 'home',
+					title: 'Home',
+					timestamp: 1578136544987,
+					operation: 'payment',
+					amount: -13220
+				},
+				{
+					id: 2,
+					category: 'topUp',
+					title: 'Top-up',
+					timestamp: 1578136544987,
+					operation: 'received',
+					amount: 40000
+				},
+				{
+					id: 1,
+					category: 'home',
+					title: 'Home',
+					timestamp: 1578136544987,
+					operation: 'payment',
+					amount: -13220
+				},
+				{
+					id: 2,
+					category: 'topUp',
+					title: 'Top-up',
+					timestamp: 1578136544987,
+					operation: 'received',
+					amount: 40000
+				},
+				{
+					id: 1,
+					category: 'home',
+					title: 'Home',
+					timestamp: 1578136544987,
+					operation: 'payment',
+					amount: -13220
+				},
+				{
+					id: 2,
+					category: 'topUp',
+					title: 'Top-up',
+					timestamp: 1578136544987,
+					operation: 'received',
+					amount: 40000
+				},
+				{
+					id: 1,
+					category: 'home',
+					title: 'Home',
+					timestamp: 1578136544987,
+					operation: 'payment',
+					amount: -13220
+				},
+				{
+					id: 2,
+					category: 'topUp',
+					title: 'Top-up',
+					timestamp: 1578136544987,
+					operation: 'received',
+					amount: 40000
+				},
+				{
+					id: 1,
+					category: 'home',
+					title: 'Home',
+					timestamp: 1578136544987,
+					operation: 'payment',
+					amount: -13220
+				},
+				{
+					id: 2,
+					category: 'topUp',
+					title: 'Top-up',
+					timestamp: 1578136544987,
+					operation: 'received',
+					amount: 40000
+				},
+				{
+					id: 1,
+					category: 'home',
+					title: 'Home',
+					timestamp: 1578136544987,
+					operation: 'payment',
+					amount: -13220
+				},
+				{
+					id: 2,
+					category: 'topUp',
+					title: 'Top-up',
+					timestamp: 1578136544987,
+					operation: 'received',
+					amount: 40000
+				},
+				{
+					id: 1,
+					category: 'home',
+					title: 'Home',
+					timestamp: 1578136544987,
+					operation: 'payment',
+					amount: -13220
+				},
+				{
+					id: 2,
+					category: 'topUp',
+					title: 'Top-up',
+					timestamp: 1578136544987,
+					operation: 'received',
+					amount: 40000
+				},
+				{
+					id: 1,
+					category: 'home',
+					title: 'Home',
+					timestamp: 1578136544987,
+					operation: 'payment',
+					amount: -13220
+				},
+				{
+					id: 2,
+					category: 'topUp',
+					title: 'Top-up',
+					timestamp: 1578136544987,
+					operation: 'received',
+					amount: 40000
+				},
+				{
+					id: 1,
+					category: 'home',
+					title: 'Home',
+					timestamp: 1578136544987,
+					operation: 'payment',
+					amount: -13220
+				},
+				{
+					id: 2,
+					category: 'topUp',
+					title: 'Top-up',
+					timestamp: 1578136544987,
+					operation: 'received',
+					amount: 40000
+				},
+
+			]
 		};
 	};
 
