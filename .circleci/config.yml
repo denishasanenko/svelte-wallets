@@ -13,7 +13,7 @@ jobs:
       - store_artifacts:
           path: coverage
       - codecov/upload:
-          file: coverage
+          file: coverage/clover.xml
       - store_artifacts:
           path: test-results
       - store_test_results:
